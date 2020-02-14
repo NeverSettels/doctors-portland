@@ -8,6 +8,6 @@ $(document).ready(() => {
 
   (async () => {
     let doctors = new Doctors()
-    doctors.getDoctorList()
+    doctors.getDoctorList(true, eric)
   })();
 })
