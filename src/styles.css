@@ -1,3 +1,16 @@
+.dr-container{
+  width: 45%;
+  margin: 1rem;
+  background-color: rgba(135, 206, 250, 0.728);
+  padding: 2rem;
+  border: grey solid .1rem;
+  border-radius: 2rem;
+}
+#found{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .no-display{
   display: none;
 }
