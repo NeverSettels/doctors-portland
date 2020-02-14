@@ -18,16 +18,20 @@ $(document).ready(() => {
         $('#no-data').removeClass('no-display')
       }
       console.log(doctors)
-      doctors.doctorsList.forEach(doctor => {
+      doctors.doctorsList.forEach((doctor, i) => {
         let {/* image_url,*/ first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones } = doctor;
         $('#found').append(`
-         <h2>DR. ${first_name} ${middle_name} ${last_name}</h2>
-         <h3>Accepts new patients: ${ accepts_new_patients ? 'Yes' : 'No'}.</h3>
-         <h3>Adress: ${street}, ${city}, ${state}, ${zip}. </h3>
-         ${phones.forEach(phone => {
-          `<h3>Phone: ${phone.number}: Type: ${phone.type} </h3>`
-        })} 
+        <div>
+          <h2>DR. ${first_name} ${middle_name} ${last_name}</h2>
+          <h3>Accepts new patients: ${ accepts_new_patients ? 'Yes' : 'No'}.</h3>
+          <h3>Adress: ${street}, ${city}, ${state}, ${zip}. </h3>
+          <div id="phones${i}">
+          </div>
+        </div>
         `);
+        phones.forEach(phone => {
+          $(`#phones${i}`).append(`<h6>Phone: ${phone.number}: Type: ${phone.type} </h6>`);
+        })
       })
     })();
   })
