@@ -14,6 +14,9 @@ $(document).ready(() => {
     (async () => {
       let api = new DoctorsApi(doctors);
       doctors.doctorsList = await api.getDoctorList(true, name);
+      if (doctors.doctorsList.length < 1) {
+        $('#no-data').removeClass('no-display')
+      }
       console.log(doctors.doctorsList);
     })();
   })
