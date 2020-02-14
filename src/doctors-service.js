@@ -11,8 +11,7 @@ export class DoctorsApi {
       if (isNameBool) {
         let response = await fetch(nameAPIUrl);
         let body = await response.json();
-        console.log(this.doctors)
-        //this.doctors.doctorsList = body
+        this.doctors.doctorsList = body
       } else {
         let response = await fetch(symtomsAPIUrl);
         let body = await response.json();
