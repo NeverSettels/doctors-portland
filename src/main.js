@@ -9,13 +9,13 @@ import { DoctorsApi } from './doctors-service'
 let doctors = new Doctors()
 $(document).ready(() => {
   $('#nameForm').submit(event => {
-    event.preventDefault()
-      // let name = 'eric'//$('#name').val()
+    event.preventDefault();
+    let name = $('#name').val();
 
-      (async () => {
-        let api = new DoctorsApi(doctors);
-        await api.getDoctorList(true, 'eric');
-        console.log(doctors.doctorsList);
-      })();
+    (async () => {
+      let api = new DoctorsApi(doctors);
+      await api.getDoctorList(true, name);
+      console.log(doctors.doctorsList);
+    })();
   })
 })
