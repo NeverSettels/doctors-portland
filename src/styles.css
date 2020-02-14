@@ -1,0 +1,53 @@
+body {
+ padding: 10vh 10vw;
+ width: 100vw;
+ background-image: url('https://wallpaperaccess.com/full/228425.jpg');
+ background-size: cover;
+ background-repeat: repeat;
+ font-family: 'Roboto', sans-serif;
+ color: white;
+  }
+#form{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Space Mono', monospace;
+}
+.planet{
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.planet img {
+  width: 15vw;
+}
+.planet img {
+  cursor: pointer;
+}
+.planet img[alt='mars'], .planet img[alt='venus'] {
+  width: 10vw;
+}
+.planet img[alt='jupiter'] {
+  width: 20vw;
+}
+
+.planets {
+  margin-top: 20vh; 
+  display: flex;
+  justify-content: space-evenly
+} 
+#back:hover{
+  cursor: pointer;
+  color: lightskyblue;
+}
+.no-display{
+  display: none;
+}
+
