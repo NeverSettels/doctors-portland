@@ -1,4 +1,4 @@
-import { Doctors } from '../src/doctors-service'
+import { DoctorsApi } from '../src/doctors-service'
 
 describe('getDoctorlist', () => {
   test('check that doctor list returns an object', () => {
