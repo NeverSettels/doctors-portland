@@ -11,11 +11,9 @@ $(document).ready(() => {
   $('#nameForm').submit(event => {
     event.preventDefault();
     let name = $('#name').val();
-    console.log(name);
-
     (async () => {
       let api = new DoctorsApi(doctors);
-      await api.getDoctorList(true, name);
+      doctors.doctorsList = await api.getDoctorList(true, name);
       console.log(doctors.doctorsList);
     })();
   })
