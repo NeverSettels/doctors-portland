@@ -19,7 +19,7 @@ $(document).ready(() => {
       }
       console.log(doctors)
       doctors.doctorsList.forEach((doctor, i) => {
-        let {/* image_url,*/ first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones } = doctor;
+        let { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones } = doctor;
         $('#found').append(`
         <div>
           <h2>DR. ${first_name} ${middle_name} ${last_name}</h2>
@@ -36,4 +36,3 @@ $(document).ready(() => {
     })();
   })
 })
-// <img src="${image_url}" alt="doctor">
