@@ -1,23 +1,22 @@
 # Solar Age
 
-#### _Object-Oriented Programming_ - _2/07/2020_
+#### _Object-Oriented Programming_ - _2/14/2020_
 
 #### _Eric Settels_
 
 ## **Description**
 
-_This program is designed to calculate a user age in different parts of the solar system and see their life expectancy in those planets, as well as teach the user a  it about life in the solar system ._
+_This program will allow a user to find a doctor in potland based on name or medical issue._
 
 ## **Behavior Driven Development**
 
 | Behavior | Input | Output |
 |----------|:-----:|--------|
-| Allow user to enter their age and check that it is not a letter or word | User inputs twentyfour  | 'Please use numbers to enter your age' |
-| User enters thier age and recives confiramtion that it was inputed correctly | User inputs 24  | 'So you're 24!' |
-| Allow user to select planet to see their age there | user selcts "mars" | User sees a fun fact about mars and their age on that planet |
-| Ask user to choose from US, Canada, and Mexico to determine life expectancy | User selects "Mexico" | The avarage life expectancy in Mexico is 77 yearss old |
-| Allow user to click planet and show their age and their countries life expectancies  | User selects 'Venus' |user sees venus fun fact their age as 39 and their life expectancy of 125 |
-| On planet click user sees how many more years they have on that planet | User selects 'Venus' | user sees venus fun fact their age as 39 and their life expectancy of 125 and that they have ~86 years to live |
+| User enters can enter a name and find doctors with that same name | User inputs Christabeth Boyd | user recives info for Dr. Christabeth Boyd, MD  |
+| User enters a name that doesn't exist and gets a message saying that the program could not find a doctor by that name | User inputs xXth1sd0ctorD0esN0tEx1stXx  | user sees " Sorry we couldn't find xXth1sd0ctorD0esN0tEx1stXx in the data base!"  |
+| Allow user to enter a symptom and find doctors based on that | user enters cough | we recomend these doctors based on your symptoms|
+| if a user enters something that can be found in the DB program will let them know | User selects "Mexico" | user sees " Sorry we couldn't find Mexico in the data base!" |
+
 
 
 ## **Setup/Installation**
@@ -27,9 +26,9 @@ _This program is designed to calculate a user age in different parts of the sola
 3. Step three: Clone this repository.
 4. Step four: Open the repository.
 5. Step five: Drag the html file into your broswer. 
-6. Step six: Start picking your toppings!
 
-or enjoy it on [Netlyfy](https://elastic-ride-6b350c.netlify.com/)
+
+
 
 ## **Known Bugs**
 
@@ -41,9 +40,6 @@ If you have any questions, comments, or concerns, feel free to contact the conte
 
 ## **Future Plans**
 
-* _Add Further Stylizing_
-* _Add More Planets_
-* _Add Transitions Between different views
 
 ## **Technologies used**
 
@@ -69,8 +65,10 @@ If you have any questions, comments, or concerns, feel free to contact the conte
 
 * ESlint
 
+*  [BetterDoctor API](https://developer.betterdoctor.com/)
+
 ## **License**
 
-Copyright (c) 2020 **Solar Age**
+Copyright (c) 2020 **Doctors Portland**
 
 ### **_MIT_**
