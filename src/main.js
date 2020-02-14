@@ -11,6 +11,7 @@ $(document).ready(() => {
   $('#nameForm').submit(event => {
     event.preventDefault();
     let name = $('#name').val();
+    console.log(name);
 
     (async () => {
       let api = new DoctorsApi(doctors);
