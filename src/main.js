@@ -10,12 +10,12 @@ let doctors = new Doctors()
 $(document).ready(() => {
   $('#nameForm').submit(event => {
     event.preventDefault()
-    console.log('eeee');
+      // let name = 'eric'//$('#name').val()
 
-    (async () => {
-      let api = new DoctorsApi(doctors);
-      await api.getDoctorList(true, 'tom');
-      console.log(doctors.doctorsList);
-    })();
+      (async () => {
+        let api = new DoctorsApi(doctors);
+        await api.getDoctorList(true, 'eric');
+        console.log(doctors.doctorsList);
+      })();
   })
 })
