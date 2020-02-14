@@ -3,17 +3,15 @@ export class DoctorsApi {
     this.doctors = []
   }
   async getDoctorList(isNameBool, name) {
-    let nameAPIUrl = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=45.5051%2C-122.6750%2C100&user_location=45.5051%2C-122.6750&skip=0&limit=10&user_key=93de781a4625762135fb1a235aab4117`
+    let nameAPIUrl = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=45.5051%2C-122.6750%2C100&user_location=45.5051%2C-122.6750&skip=0&limit=10&user_key=${process.env.API_KEY}`
     let symtomsAPIUrl = `https://api.betterdoctor.com/2016-03-01/doctors?location=45.5051,-122.6750,100&skip=2&limit=10&user_key=93de781a4625762135fb1a235aab4117`
     let body;
     let response;
     try {
       if (isNameBool) {
         response = await fetch(nameAPIUrl);
-        //  body = await response.json();
       } else {
         response = await fetch(symtomsAPIUrl);
-        //  body = await response.json();
       }
       if (response)
         if (response.ok && response.status == 200) {
@@ -36,7 +34,4 @@ export class DoctorsApi {
       console.error("ERROR ERROR!" + error.message)
     }
   }
-}
-function checkResponse(response) {
-
 }
