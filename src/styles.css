@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Oswald:700&display=swap');
+
+body{
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(231, 231, 231);
+}
+h1,h2,h3,h4,h5,h6,strong{
+  font-family: 'Oswald', sans-serif;
+}
+.jumbotron{
+  background-color: rgba(144, 175, 193, 0.898);
+  border: grey solid .1rem;
+  border-radius: 2rem;
+}
+
 .dr-container{
   width: 45%;
   margin: 1rem;
-  background-color: rgba(135, 206, 250, 0.728);
+  background-color: rgba(203, 235, 255, 0.898);
   padding: 2rem;
   border: grey solid .1rem;
   border-radius: 2rem;
