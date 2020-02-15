@@ -1,4 +1,3 @@
-
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,9 +15,9 @@ $(document).ready(() => {
       let api = new DoctorsApi(doctors);
       doctors.doctorsList = await api.getDoctorList(true, name);
       if (!doctors.doctorsList) {
-        $('#error').removeClass('no-display')
+        $('#error').removeClass('no-display');
       } else if (doctors.doctorsList.length < 1) {
-        $('#no-data').removeClass('no-display')
+        $('#no-data').removeClass('no-display');
       } else {
         doctors.doctorsList.forEach((doctor, i) => {
           let { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones } = doctor;
