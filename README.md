@@ -25,9 +25,10 @@ _This program will allow a user to find a doctor in potland based on name or med
 2. Step two: Navigate to the desired directory in which you want to clone this repository.
 3. Step three: Clone this repository.
 4. Step four: Open the repository.
-5. Step five: Drag the html file into your broswer. 
-
-
+5. Step Five: Get an api key from  [BetterDoctor API](https://developer.betterdoctor.com/)
+6. Step Six: Open Repository and add .env file and create variable called API_KEY and st it equal to your key. 
+7. Step seven: Run npm start on your terminal. 
+8. Step Eight: Enjoy site. 
 
 
 ## **Known Bugs**
