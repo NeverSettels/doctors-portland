@@ -17,10 +17,9 @@ export class DoctorsApi {
         body = await response.json();
         let { data } = body;
         data.forEach(doctor => {
-          let tempObj = {};
           let { profile: { first_name, middle_name, last_name }, practices } = doctor;
           let { accepts_new_patients, visit_address: { city, street, zip, state }, phones } = practices[0];
-          tempObj = { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones };
+          let tempObj = { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones };
           this.doctors.push(tempObj);
         })
         return this.doctors;
