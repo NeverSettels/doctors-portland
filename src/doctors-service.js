@@ -18,8 +18,13 @@ export class DoctorsApi {
         let { data } = body;
         data.forEach(doctor => {
           let { profile: { first_name, middle_name, last_name }, practices } = doctor;
-          let { accepts_new_patients, visit_address: { city, street, zip, state }, phones } = practices[0];
-          let tempObj = { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones };
+          let { accepts_new_patients, visit_address: { city, street, zip, state }, phones, website } = practices[0];
+          if(!website){
+            website = "Sorry No Website!"
+          }
+          console.log(website);
+          
+          let tempObj = { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones, website };
           this.list.push(tempObj);
         })
         return this.list;

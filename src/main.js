@@ -23,12 +23,13 @@ $(document).ready(() => {
         $('#no-data').removeClass('no-display');
       } else {
         api.list.forEach((doctor, i) => {
-          let { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones } = doctor;
+          let { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones, website } = doctor;
           $('#found').append(`
         <div class="dr-container">
           <h2 class="dr-name">Dr. ${first_name} ${middle_name ? middle_name : ''} ${last_name}</h2>
           <p class="dr-patient"> <strong>Accepts new patients:</strong> ${ accepts_new_patients ? 'Yes' : 'No'}.</p>
           <p class="dr-adress"><strong>Adress:</strong> ${street}, ${city}, ${state}, ${zip}. </p>
+          <p class="dr-adress"><strong>Website:</strong> ${website !== "Sorry No Website!"? "<a href='"+website+"'>"+website+"<a/>": website} </p>
           <div class="dr-phones" id="phones${i}">
           </div>
         </div>
