@@ -2,31 +2,27 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { Doctors } from './doctors';
 import { DoctorsApi } from './doctors-service';
 
-let doctors = new Doctors();
 $(document).ready(() => {
   $('#nameForm').on( 'click', 'button' ,event => {
     event.preventDefault();
-   let searchType = event.target.id;
-   console.log(searchType);
-   
+   let searchType = event.target.id;   
     $('#found').empty();
     let name = $('#name').val();
     (async () => {
-      let api = new DoctorsApi(doctors);
+      let api = new DoctorsApi();
       if(searchType==='name'){
-        doctors.doctorsList = await api.getDoctorList(true, name);
+        api.list = await api.getDoctorList(true, name);
       }else{
-        doctors.doctorsList = await api.getDoctorList(false, name);
+        api.list = await api.getDoctorList(false, name);
       }
-      if (!doctors.doctorsList) {
+      if (!api.list) {
         $('#error').removeClass('no-display');
-      } else if (doctors.doctorsList.length < 1) {
+      } else if (api.list.length < 1) {
         $('#no-data').removeClass('no-display');
       } else {
-        doctors.doctorsList.forEach((doctor, i) => {
+        api.list.forEach((doctor, i) => {
           let { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones } = doctor;
           $('#found').append(`
         <div class="dr-container">

@@ -1,6 +1,6 @@
 export class DoctorsApi {
   constructor() {
-    this.doctors = [];
+    this.list = [];
   }
   async getDoctorList(isNameBool, name) {
     let nameAPIUrl = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=45.5051%2C-122.6750%2C100&user_location=45.5051%2C-122.6750&skip=0&limit=10&user_key=${process.env.API_KEY}`;
@@ -20,9 +20,9 @@ export class DoctorsApi {
           let { profile: { first_name, middle_name, last_name }, practices } = doctor;
           let { accepts_new_patients, visit_address: { city, street, zip, state }, phones } = practices[0];
           let tempObj = { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones };
-          this.doctors.push(tempObj);
+          this.list.push(tempObj);
         })
-        return this.doctors;
+        return this.list;
       } else {
         return false;
       }
