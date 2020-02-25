@@ -7,13 +7,20 @@ import { DoctorsApi } from './doctors-service';
 
 let doctors = new Doctors();
 $(document).ready(() => {
-  $('#nameForm').submit(event => {
+  $('#nameForm').on( 'click', 'button' ,event => {
     event.preventDefault();
+   let searchType = event.target.id;
+   console.log(searchType);
+   
     $('#found').empty();
     let name = $('#name').val();
     (async () => {
       let api = new DoctorsApi(doctors);
-      doctors.doctorsList = await api.getDoctorList(true, name);
+      if(searchType==='name'){
+        doctors.doctorsList = await api.getDoctorList(true, name);
+      }else{
+        doctors.doctorsList = await api.getDoctorList(false, name);
+      }
       if (!doctors.doctorsList) {
         $('#error').removeClass('no-display');
       } else if (doctors.doctorsList.length < 1) {
@@ -37,4 +44,13 @@ $(document).ready(() => {
       }
     })();
   });
+  
+
+
+
+
+
+
+
+
 });
