@@ -12,23 +12,23 @@ _This program will allow a user to find a doctor in potland based on name or med
 
 | Behavior | Input | Output |
 |----------|:-----:|--------|
-| User enters can enter a name and find doctors with that same name | User inputs Christabeth Boyd | user recives info for Dr. Christabeth Boyd, MD  |
-| User enters a name that doesn't exist and gets a message saying that the program could not find a doctor by that name | User inputs xXth1sd0ctorD0esN0tEx1stXx  | user sees " Sorry we couldn't find xXth1sd0ctorD0esN0tEx1stXx in the data base!"  |
-| Allow user to enter a symptom and find doctors based on that | user enters cough | we recomend these doctors based on your symptoms|
-| if a user enters something that can be found in the DB program will let them know | User selects "Mexico" | user sees " Sorry we couldn't find it in the data base!" |
+| User enters can enter a name and find doctors with that same name | User inputs Christabeth and clicks search by name | user recives a list for the results of that search  with the follwoing info: do they accept new patients, address, website phones nad type of phones |
+| User enters a name that doesn't exist and gets a message saying that the program could not find a doctor by that name | User inputs xXth1sd0ctorD0esN0tEx1stXx  | user sees " Sorry we couldn't find any doctors with your search query"  |
+| Allow user to enter a symptom and find doctors based on that | user enters cough and clicks search by general query | user recives a list for the results of that search  with the follwoing info: do they accept new patients, address, website phones nad type of phones |
+| if a user enters something that can be found in the DB program will let them know | User selects **giberish** | user sees " Sorry we couldn't find it in the data base!" |
 | if the the api call fails display an error to user  | User enters "john" | user sees " Sorry the call to the api failed" |
 
 
 ## **Setup/Installation**
 
-1. Step one: Open up your terminal
-2. Step two: Navigate to the desired directory in which you want to clone this repository.
-3. Step three: Clone this repository.
-4. Step four: Open the repository.
-5. Step Five: Get an api key from  [BetterDoctor API](https://developer.betterdoctor.com/)
-6. Step Six: Open Repository and add .env file and create variable called API_KEY and st it equal to your key. 
-7. Step seven: Run npm start on your terminal. 
-8. Step Eight: Enjoy site. 
+1. Open up your terminal
+2. Navigate to the desired directory in which you want to clone this repository.
+3. Clone this repository.
+4. Open the repository.
+5. Get an api key from  [BetterDoctor API](https://developer.betterdoctor.com/)
+6. Open Repository and add .env file and copy and paste the follwoing variable into it with your api keyAPI_KEY = your-api-key-here . 
+7. Run npm start on your terminal. 
+8. Enjoy site. 
 
 
 ## **Known Bugs**

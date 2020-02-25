@@ -22,8 +22,6 @@ export class DoctorsApi {
           if(!website){
             website = "Sorry No Website!"
           }
-          console.log(website);
-          
           let tempObj = { first_name, middle_name, last_name, accepts_new_patients, city, street, zip, state, phones, website };
           this.list.push(tempObj);
         })
