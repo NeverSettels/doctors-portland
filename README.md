@@ -27,6 +27,7 @@ _This program will allow a user to find a doctor in potland based on name or med
 4. Open the repository.
 5. Get an api key from  [BetterDoctor API](https://developer.betterdoctor.com/)
 6. Open Repository and add .env file and copy and paste the follwoing variable into it with your api keyAPI_KEY = your-api-key-here . 
+7. Run npm i on the terminal to install all dependancies.
 7. Run npm start on your terminal. 
 8. Enjoy site. 
 
@@ -39,9 +40,6 @@ There are no known bugs at this time.
 
 If you have any questions, comments, or concerns, feel free to contact the content creator at settels.eric@gmail.com 
 
-## **Future Plans**
-
-* Allow user to search by symtoms 
 
 ## **Technologies used**
 
